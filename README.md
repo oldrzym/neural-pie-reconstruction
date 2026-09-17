@@ -107,9 +107,41 @@ vendor DPD source code. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 
 ## Results
 
-`results/paper_results.csv` transcribes the main and ablation tables from the
-published article. Model checkpoints and prediction files are intentionally not
-stored in Git.
+These are the results reported on the original paper benchmark. They must not
+be attributed to the public `open_*` splits without retraining and evaluation.
+
+| Configuration | Variant | EM | CharAcc | MED | MNED |
+|---|---:|---:|---:|---:|---:|
+| ByT5-Base, orthographic baseline | V1 | 0.136 | 0.449 | 3.02 | 0.365 |
+| **ByT5-Base, conservative Epitran-only input** | **V10** | **0.216** | **0.490** | **2.84** | **0.344** |
+| ByT5-Base, expanded orthographic data | V11 | 0.183 | 0.452 | 3.10 | 0.371 |
+| CognateTransformer, LingPy alignment on | Paper test | 0.019 | 0.303 | 3.65 | 0.589 |
+| CognateTransformer, LingPy alignment off | Paper test | 0.055 | 0.317 | 3.52 | 0.564 |
+
+Selected data and model ablations:
+
+| Configuration | Variant | EM | CharAcc | MED | MNED |
+|---|---:|---:|---:|---:|---:|
+| No language tags | V6 | 0.161 | 0.448 | 3.09 | 0.378 |
+| No label smoothing | V1 | 0.144 | 0.446 | 3.02 | 0.364 |
+| ByT5-Large | V1 | 0.000 | 0.158 | 7.09 | 0.767 |
+| +10 synthetic cognates | V2 | 0.116 | 0.413 | 3.35 | 0.400 |
+| +20 synthetic cognates | V3 | 0.144 | 0.440 | 3.24 | 0.381 |
+| +20 + Wiktionary-guided validation | V5 | 0.108 | 0.400 | 3.43 | 0.410 |
+| +20 + validation + EtymologyDB | V11 | 0.183 | 0.452 | 3.10 | 0.371 |
+
+DPD and FeVeT use native metrics that are not directly comparable to the
+sequence-level metrics above:
+
+| Model | Setting | Native result |
+|---|---|---:|
+| DPD | Supervised, V1 | Accuracy 0.017 |
+| DPD | Semi-supervised, V1 | Accuracy 0.069 |
+| FeVeT | V7 | Phoneme edit distance 3.56; B-cubed F1 0.307 |
+
+`results/paper_results.csv` contains the complete main and ablation tables in a
+machine-readable form. Model checkpoints and prediction files are intentionally
+not stored in Git.
 
 ## License and citation
 
