@@ -1,0 +1,19 @@
+section,configuration,dataset,em,char_accuracy,med,mned
+main,ByT5-Base,V1,0.136,0.449,3.02,0.365
+main,ByT5-Base + conservative phoneticization,V10,0.216,0.490,2.84,0.344
+main,ByT5-Base + expanded orthographic data,V11,0.183,0.452,3.10,0.371
+main,CognateTransformer (LingPy on),paper test,0.019,0.303,3.65,0.589
+main,CognateTransformer (LingPy off),paper test,0.055,0.317,3.52,0.564
+ablation,No language tags,V6,0.161,0.448,3.09,0.378
+ablation,No label smoothing,V1,0.144,0.446,3.02,0.364
+ablation,ByT5-Large,V1,0.000,0.158,7.09,0.767
+ablation,mT5-Base,V1,0.070,0.220,4.50,0.550
+ablation,Flan-T5-Base,V1,0.031,0.307,3.73,0.470
+ablation,T5v1.1-Base,V1,0.042,0.299,3.85,0.481
+ablation,+10 synthetic cognates,V2,0.116,0.413,3.35,0.400
+ablation,+20 synthetic cognates,V3,0.144,0.440,3.24,0.381
+ablation,+20 + validation,V5,0.108,0.400,3.43,0.410
+ablation,+20 + validation + EtymologyDB,V11,0.183,0.452,3.10,0.371
+ablation,Hybrid + uroman,V7,0.175,0.474,3.04,0.367
+ablation,Hybrid-full,V8,0.177,0.462,3.03,0.365
+ablation,Epitran-only,V10,0.216,0.490,2.84,0.344

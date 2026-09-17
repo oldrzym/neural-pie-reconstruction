@@ -1,0 +1,10 @@
+-r training/requirements.txt
+
+aiohttp
+beautifulsoup4
+certifi
+epitran
+openai
+phonemizer
+pycountry
+requests

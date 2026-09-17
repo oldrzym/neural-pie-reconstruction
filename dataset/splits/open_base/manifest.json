@@ -1,0 +1,38 @@
+{
+  "name": "open_base",
+  "description": "IE-CoR and Kaikki rows. Koebler and Starling rows are excluded.",
+  "paper_exact_split": false,
+  "exclusions": [
+    "koebler",
+    "starling"
+  ],
+  "files": {
+    "train": {
+      "path": "train.csv",
+      "rows": 2561,
+      "sources": {
+        "iecor": 1276,
+        "kaikki": 1285
+      },
+      "sha256": "cdc41ff290c8b53f018ef23dee930d28c3cab3b8c6c284ad054bf5753d877474"
+    },
+    "val": {
+      "path": "val.csv",
+      "rows": 321,
+      "sources": {
+        "iecor": 160,
+        "kaikki": 161
+      },
+      "sha256": "962318b8d2b84af523300b069b5596ff644f5a5c2a8660c3d0abb99e66f9376c"
+    },
+    "test": {
+      "path": "test.csv",
+      "rows": 321,
+      "sources": {
+        "iecor": 160,
+        "kaikki": 161
+      },
+      "sha256": "c6b7bc191875714f1368f731e195c288b3cd3584e84969dc1019281dae8a956a"
+    }
+  }
+}

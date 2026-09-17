@@ -1,0 +1,57 @@
+# PIE Reconstruction Training Config
+
+# Data
+data:
+  train_file: "../dataset/splits/iecor_kaikki_koebler_normalized_notags_loo_hittite_strict/train.csv"
+  val_file: "../dataset/splits/iecor_kaikki_koebler_normalized_notags_loo_hittite_strict/val.csv"
+  test_file: "../dataset/splits/iecor_kaikki_koebler_normalized_notags_loo_hittite_strict/test.csv"
+  input_column: "input"
+  target_column: "output"
+  max_input_length: 512
+  max_target_length: 64
+
+# Model
+model:
+  # Options: "google/byt5-base", "google/byt5-small", "google/mt5-base", "t5-base"
+  name: "google/byt5-base"
+
+# Training
+training:
+  output_dir: "./outputs"  # будет автоматически добавлен timestamp
+  num_epochs: 50
+  batch_size: 16
+  eval_batch_size: 2  # меньше чем train — генерация жрёт память
+  gradient_accumulation_steps: 1  # effective batch = 16
+  learning_rate: 3.0e-4
+  warmup_steps: 500
+  weight_decay: 0.01
+  dropout: 0.1  # regularization
+  label_smoothing: 0.1  # helps generalization
+  # Mixed precision: use bf16 for A100, fp16 for T4/V100
+  fp16: false
+  bf16: true  # A100 native format, faster & more stable
+
+  # Evaluation during training (set to "no" to disable, "epoch" to eval each epoch)
+  eval_strategy: "epoch"
+  early_stopping_patience: 5
+
+  # Checkpointing
+  save_strategy: "epoch"
+  save_total_limit: 5
+  load_best_model_at_end: true
+  metric_for_best_model: "eval_loss"
+
+  # Logging
+  logging_steps: 50
+
+# Generation (for evaluation)
+generation:
+  num_beams: 2  # меньше = меньше памяти (было 4)
+  max_length: 64
+  early_stopping: true
+
+# Wandb
+wandb:
+  project: "pie-reconstruction"
+  entity: null  # your wandb username
+  run_name: null  # auto-generated if null

@@ -1,0 +1,23 @@
+editdistance
+einops
+lingpy
+lingrex
+pytorch-lightning
+torch
+transformers
+wandb
+numpy
+pandas
+matplotlib
+seaborn
+tabulate
+toml
+tqdm
+scikit-learn
+scipy
+newick
+python-dotenv
+pandasql
+pyyaml
+torchshow
+panphon @ git+https://github.com/dmort27/panphon.git@6acd3833743a49e63941a0b740ee69eae1dafc1c

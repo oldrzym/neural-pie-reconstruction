@@ -1,0 +1,39 @@
+{
+  "name": "open_validated_synthetic_expanded",
+  "description": "Validated synthetic base plus EtymologyDB rows; public analogue, not the exact paper V11 split.",
+  "paper_exact_split": false,
+  "exclusions": [
+    "koebler",
+    "starling"
+  ],
+  "files": {
+    "train": {
+      "path": "train.csv",
+      "rows": 8517,
+      "sources": {
+        "etymology_db": 5956,
+        "iecor": 1276,
+        "kaikki": 1285
+      },
+      "sha256": "e0d171637fdc3d836e054130896803ee61b75a80197fe5b05f0dce7d7d28a018"
+    },
+    "val": {
+      "path": "val.csv",
+      "rows": 321,
+      "sources": {
+        "iecor": 160,
+        "kaikki": 161
+      },
+      "sha256": "962318b8d2b84af523300b069b5596ff644f5a5c2a8660c3d0abb99e66f9376c"
+    },
+    "test": {
+      "path": "test.csv",
+      "rows": 321,
+      "sources": {
+        "iecor": 160,
+        "kaikki": 161
+      },
+      "sha256": "c6b7bc191875714f1368f731e195c288b3cd3584e84969dc1019281dae8a956a"
+    }
+  }
+}

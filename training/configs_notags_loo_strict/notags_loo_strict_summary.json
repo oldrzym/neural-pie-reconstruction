@@ -1,0 +1,46 @@
+{
+  "latin": {
+    "dataset": "/root/PIE-reconstruction/dataset/splits/iecor_kaikki_koebler_normalized_notags_loo_latin_strict",
+    "config": "/root/PIE-reconstruction/training/configs_notags_loo_strict/config_notags_loo_latin_strict.yaml",
+    "train_rows": 8298,
+    "val_rows": 630,
+    "test_rows": 630,
+    "dropped_val_empty_after_filter": 0,
+    "dropped_test_empty_after_filter": 0,
+    "sample_val_input": "iocus",
+    "sample_test_input": "spuorns"
+  },
+  "sanskrit": {
+    "dataset": "/root/PIE-reconstruction/dataset/splits/iecor_kaikki_koebler_normalized_notags_loo_sanskrit_strict",
+    "config": "/root/PIE-reconstruction/training/configs_notags_loo_strict/config_notags_loo_sanskrit_strict.yaml",
+    "train_rows": 8664,
+    "val_rows": 447,
+    "test_rows": 447,
+    "dropped_val_empty_after_filter": 0,
+    "dropped_test_empty_after_filter": 0,
+    "sample_val_input": "न च॑",
+    "sample_test_input": "तर्मन् सुतर्मन्"
+  },
+  "greek": {
+    "dataset": "/root/PIE-reconstruction/dataset/splits/iecor_kaikki_koebler_normalized_notags_loo_greek_strict",
+    "config": "/root/PIE-reconstruction/training/configs_notags_loo_strict/config_notags_loo_greek_strict.yaml",
+    "train_rows": 7135,
+    "val_rows": 1211,
+    "test_rows": 1212,
+    "dropped_val_empty_after_filter": 0,
+    "dropped_test_empty_after_filter": 0,
+    "sample_val_input": "γένυς",
+    "sample_test_input": "κονίς"
+  },
+  "hittite": {
+    "dataset": "/root/PIE-reconstruction/dataset/splits/iecor_kaikki_koebler_normalized_notags_loo_hittite_strict",
+    "config": "/root/PIE-reconstruction/training/configs_notags_loo_strict/config_notags_loo_hittite_strict.yaml",
+    "train_rows": 9177,
+    "val_rows": 190,
+    "test_rows": 191,
+    "dropped_val_empty_after_filter": 0,
+    "dropped_test_empty_after_filter": 0,
+    "sample_val_input": "𒀀𒀊𒉺",
+    "sample_test_input": "kuu̯an- / kun-"
+  }
+}

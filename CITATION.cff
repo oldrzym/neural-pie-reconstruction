@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "Please cite the published paper when using this code or data."
+title: "Neural PIE Reconstruction: Code and Open Data"
+type: software
+authors:
+  - family-names: Kalinowski
+    given-names: Konstantin
+  - family-names: Malykh
+    given-names: Valentin
+repository-code: "https://github.com/oldrzym/neural-pie-reconstruction"
+license: Apache-2.0
+preferred-citation:
+  type: article
+  title: "Towards Neural PIE Reconstruction from Heterogeneous Cognate Data"
+  authors:
+    - family-names: Kalinowski
+      given-names: Konstantin
+    - family-names: Malykh
+      given-names: Valentin
+  journal: "Computational Linguistics and Intellectual Technologies"
+  volume: "24"
+  year: 2026
+  start: 163
+  end: 170
+  doi: "10.29003/2075-7182-2026-24-163-170"

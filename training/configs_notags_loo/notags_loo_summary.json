@@ -1,0 +1,71 @@
+{
+  "latin": {
+    "dataset_dir": "/root/PIE-reconstruction/dataset/splits/iecor_kaikki_koebler_normalized_notags_loo_latin",
+    "holdout_tags": [
+      "lat"
+    ],
+    "rows_total_merged": 9558,
+    "train_rows": 8298,
+    "val_rows": 630,
+    "test_rows": 630,
+    "train_inputs_with_tags_after_strip": 0,
+    "val_inputs_with_tags_after_strip": 0,
+    "test_inputs_with_tags_after_strip": 0,
+    "sample_train_input": "femme fémina femmina feume femine femeie femmena feme femme fna femna δēn fembra",
+    "sample_val_input": "याचति juoktis joks juokas iocus",
+    "sample_test_input": "parəna partāu̯ar / partaun- pārrä spārns spar̃nas parr spuorns pal perut",
+    "config": "/root/PIE-reconstruction/training/configs_notags_loo/config_notags_loo_latin.yaml"
+  },
+  "sanskrit": {
+    "dataset_dir": "/root/PIE-reconstruction/dataset/splits/iecor_kaikki_koebler_normalized_notags_loo_sanskrit",
+    "holdout_tags": [
+      "san"
+    ],
+    "rows_total_merged": 9558,
+    "train_rows": 8664,
+    "val_rows": 447,
+    "test_rows": 447,
+    "train_inputs_with_tags_after_strip": 0,
+    "val_inputs_with_tags_after_strip": 0,
+    "test_inputs_with_tags_after_strip": 0,
+    "sample_train_input": "femme fémina femmina feume femine femeie femmena feme femme fna femna δēn fembra",
+    "sample_val_input": "nuk ne-ku न च॑ neque",
+    "sample_test_input": "τέρμα τέρμων तर्मन् सुतर्मन् termen terminus termō",
+    "config": "/root/PIE-reconstruction/training/configs_notags_loo/config_notags_loo_sanskrit.yaml"
+  },
+  "greek": {
+    "dataset_dir": "/root/PIE-reconstruction/dataset/splits/iecor_kaikki_koebler_normalized_notags_loo_greek",
+    "holdout_tags": [
+      "ell",
+      "grc"
+    ],
+    "rows_total_merged": 9558,
+    "train_rows": 7135,
+    "val_rows": 1211,
+    "test_rows": 1212,
+    "train_inputs_with_tags_after_strip": 0,
+    "val_inputs_with_tags_after_strip": 0,
+    "test_inputs_with_tags_after_strip": 0,
+    "sample_train_input": "femme fémina femmina feume femine femeie femmena feme femme fna femna δēn fembra",
+    "sample_val_input": "γένυς gena dem Kelt.",
+    "sample_test_input": "nit անիծ κονίς thëri",
+    "config": "/root/PIE-reconstruction/training/configs_notags_loo/config_notags_loo_greek.yaml"
+  },
+  "hittite": {
+    "dataset_dir": "/root/PIE-reconstruction/dataset/splits/iecor_kaikki_koebler_normalized_notags_loo_hittite",
+    "holdout_tags": [
+      "hit"
+    ],
+    "rows_total_merged": 9558,
+    "train_rows": 9177,
+    "val_rows": 190,
+    "test_rows": 191,
+    "train_inputs_with_tags_after_strip": 0,
+    "val_inputs_with_tags_after_strip": 0,
+    "test_inputs_with_tags_after_strip": 0,
+    "sample_train_input": "femme fémina femmina feume femine femeie femmena feme femme fna femna δēn fembra",
+    "sample_val_input": "pa 𒀀𒀊𒉺 𒀀𒀊𒉺 από 𐀀𐀢 ab",
+    "sample_test_input": "šun šun hund hond hundur hond chien hûn Hund hundur cane hoon cian šuõ cão hund cane cane hund tchin kuu̯an- / kun- ku ku kýōn canis sunis suns cù Hond śvā́ cjan span cú šown suwani- sag cuno- hunder suṇa qui, quy ku-na-",
+    "config": "/root/PIE-reconstruction/training/configs_notags_loo/config_notags_loo_hittite.yaml"
+  }
+}
