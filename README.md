@@ -139,6 +139,26 @@ sequence-level metrics above:
 | DPD | Semi-supervised, V1 | Accuracy 0.069 |
 | FeVeT | V7 | Phoneme edit distance 3.56; B-cubed F1 0.307 |
 
+### Representative predictions
+
+The examples below are predictions from the best-performing V10 ByT5 run on
+redistributable IE-CoR/Kaikki test rows. Inputs are truncated for readability;
+targets and predictions are unchanged. Exact match is strict, including accents
+and diacritics.
+
+| Result | Meaning | Input (truncated) | Target | Prediction | Error note |
+|---|---|---|---|---|---|
+| Exact | split, cloven | `[san] भित्त [lat] fissus` | `*bʰidtós` | `*bʰidtós` | — |
+| Exact | to smear, paint, streak | `[grc] χρίω [lit] griẽti` | `*gʰrey-` | `*gʰrey-` | — |
+| Exact | to join, attach; agreement | `[lat] pāx [lat] pactum [san] पाशयति` | `*peh₂ḱ-` | `*peh₂ḱ-` | — |
+| Exact | up, from below | `[gle] faoi [gla] fo [grc] ὑπό [hin] upə- ...` | `*upó` | `*upó` | — |
+| Exact | around, on either side of | `[sqi] më [sqi] mbë [grc] ἀμφί [lat] ambi-` | `*h₂m̥bʰi` | `*h₂m̥bʰi` | — |
+| Error | forty | `[hye] քառասուն [gle] ceathracha ... [lat] quadrāgintā` | `*kʷétwr̥dḱomt` | `*kʷetwr̥dḱomt` | Missing accent |
+| Error | wolf | `... [lat] lupus [txb] walkwe` | `*wĺ̥kʷos` | `*lewp-` | Wrong root shape |
+| Error | top, tip, point | `[sqi] bar [bre] bara [cym] bara [san] भृष्टि ...` | `*bʰers-` | `*bʰer-` | Final `s` omitted |
+| Error | to laud, honour | `[grc] αἴδομαι [san] ईट्टे ...` | `*h₂eysd-` | `*h₂eyd-` | Internal `s` omitted |
+| Error | salt | `[sqi] ngjelmë [xcl] աղ [lav] sāls [prg] sal ...` | `*séh₂ls` | `*sel-` | Laryngeal, quantity, and suffix lost |
+
 `results/paper_results.csv` contains the complete main and ablation tables in a
 machine-readable form. Model checkpoints and prediction files are intentionally
 not stored in Git.
